@@ -12,8 +12,8 @@ const MobileFooter = () => {
     return null;
   }
 
-  return ( 
-    <div 
+  return (
+    <div
       className="
         fixed 
         justify-between 
@@ -22,22 +22,23 @@ const MobileFooter = () => {
         z-40 
         flex 
         items-center 
-        bg-white 
+        bg-slate-800
         border-t-[1px] 
+        border-t-slate-700
         lg:hidden
       "
     >
       {routes.map((route) => (
-        <MobileItem 
-          key={route.href} 
-          href={route.href} 
-          active={route.active} 
+        <MobileItem
+          key={route.href}
+          href={route.href}
+          active={route.active}
           icon={route.icon}
           onClick={route.onClick}
         />
       ))}
     </div>
-   );
+  );
 }
  
 export default MobileFooter;
